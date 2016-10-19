@@ -1,15 +1,16 @@
-﻿using Commen;
-using Microsoft.AspNet.SignalR;
-using Microsoft.AspNet.SignalR.Hubs;
+﻿using Microsoft.AspNet.SignalR.Hubs;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DataHubService
+namespace SRH.NBS.DataProvider
 {
-    [HubName("BrewingHub")]
-    public class DataHub : Hub
+    [HubName("RealtimeBrewingData")]
+    public class HistoricalBrewingDataHub
     {
-
         public void MulticastBrewingData(string message)
         {
             Debug.WriteLine(message);
@@ -25,6 +26,5 @@ namespace DataHubService
         {
             return new TestClass { Age = 12, EtterNavn = "Hansen", ForNavn = "Sindre" };
         }
-        
     }
 }

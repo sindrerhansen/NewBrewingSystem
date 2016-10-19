@@ -13,9 +13,9 @@ namespace DataHubService
         {
             HostFactory.Run(configure =>
             {
-                configure.Service<DataHubService>(service =>
+                configure.Service<RealtimeDataService>(service =>
                 {
-                    service.ConstructUsing(s => new DataHubService());
+                    service.ConstructUsing(s => new RealtimeDataService());
                     service.WhenStarted(s => s.Start());
                     service.WhenStopped(s => s.Stop());
                 });
@@ -23,7 +23,7 @@ namespace DataHubService
                 configure.RunAsLocalSystem();
                 configure.SetServiceName("SRH.NBS.DataHubService");
                 configure.SetDisplayName("SRH.NBS.DataHubService");
-                configure.SetDescription("Data reader and distrubuter for Sindre brewing system");
+                configure.SetDescription("Data reader and distributer for Sindre brewing system");
             });
         }
     }

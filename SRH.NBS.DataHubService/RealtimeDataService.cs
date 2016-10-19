@@ -1,6 +1,6 @@
 ﻿namespace DataHubService
 {
-    public class DataHubService
+    public class RealtimeDataService
     {
         public void Start()
         {
