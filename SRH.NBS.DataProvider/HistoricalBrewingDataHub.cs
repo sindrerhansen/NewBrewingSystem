@@ -1,20 +1,19 @@
-﻿using Microsoft.AspNet.SignalR.Hubs;
+﻿using SRH.NBS.Commen;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace SRH.NBS.DataProvider
 {
-    [HubName("RealtimeBrewingData")]
-    public class HistoricalBrewingDataHub
+    [HubName("HistoricalBrewingData")]
+    public class HistoricalBrewingDataHub : Hub
     {
-        public void MulticastBrewingData(string message)
+        public void OnRealtimeBrewingData(string message)
         {
-            Debug.WriteLine(message);
-            Clients.All.ReceiveMulticastBrewingData(message);
+      
         }
 
         public void SendCommand(string command)

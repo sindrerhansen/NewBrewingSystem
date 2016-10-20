@@ -1,34 +1,36 @@
+using System;
 using GalaSoft.MvvmLight;
+using Microsoft.AspNet.SignalR.Client;
+using SRH.NBS.Commen;
+using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace SRH.NBS.DesktopApplication.ViewModel
 {
-    /// <summary>
-    /// This class contains properties that the main View can data bind to.
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
-    /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
+        SignalrClient realtimeHub;
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            realtimeHub = new SignalrClient("192.168.3.125");
+            realtimeHub.Hub.On("OnRealtimeBrewingData", data => {
+                var reciveObject = JsonConvert.DeserializeObject<HotLiquidTank>(data);
+                Volume = reciveObject.Volume.ToString();
+            });
+
+        }
+        private void ParceData(string data)
+        {
+            var reciveObject = JsonConvert.DeserializeObject<HotLiquidTank>(data);
+            Volume = reciveObject.Volume.ToString();
+        }
+        private string volume;
+        public string Volume {
+            get { return volume; }
+            set {
+                volume = value;
+                RaisePropertyChanged(()=>Volume);
+                }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRH.NBS.DataCollector
+namespace SRH.NBS.ControlSystemWriter
 {
     class Program
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SRH.NBS.DesktopApplication.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace SRH.NBS.DesktopApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm;
         public MainWindow()
         {
+            
             InitializeComponent();
+            mvm = new MainViewModel();
+            DataContext = mvm;
         }
     }
 }

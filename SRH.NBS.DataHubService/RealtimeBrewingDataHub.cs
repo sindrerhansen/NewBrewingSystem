@@ -10,7 +10,7 @@ namespace DataHubService
     public class RealtimeBrewingDataHub : Hub
     {
 
-        public void MulticastBrewingData(string message)
+        public void OnRealtimeBrewingData(string message)
         {
             Debug.WriteLine(message);
             Clients.All.ReceiveMulticastBrewingData(message);

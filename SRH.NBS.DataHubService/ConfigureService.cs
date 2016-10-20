@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Topshelf;
+﻿using Topshelf;
 
 namespace DataHubService
 {
@@ -13,6 +8,7 @@ namespace DataHubService
         {
             HostFactory.Run(configure =>
             {
+                
                 configure.Service<RealtimeDataService>(service =>
                 {
                     service.ConstructUsing(s => new RealtimeDataService());
@@ -25,6 +21,7 @@ namespace DataHubService
                 configure.SetDisplayName("SRH.NBS.DataHubService");
                 configure.SetDescription("Data reader and distributer for Sindre brewing system");
             });
+           
         }
     }
 }
