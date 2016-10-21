@@ -1,15 +1,12 @@
 ﻿using Newtonsoft.Json;
 using SRH.NBS.Commen;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace SRH.NBS.DataCollector
+namespace SRH.NBS.DataCollectorService
 {
     public class UdpCollector
     {
@@ -39,7 +36,7 @@ namespace SRH.NBS.DataCollector
                         Console.WriteLine(reciveObject.Volume);
                         if (realtimeHub.Connection.State == Microsoft.AspNet.SignalR.Client.ConnectionState.Connected)
                         {
-                            realtimeHub.Hub.Invoke("OnRealtimeBrewingData", jsonObj);
+                            realtimeHub.Hub.Invoke("PublishRealtimeBrewingData", jsonObj);
                     }
                     }
 

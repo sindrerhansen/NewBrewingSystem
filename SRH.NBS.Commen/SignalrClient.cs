@@ -23,7 +23,12 @@ namespace SRH.NBS.Commen
 
         public SignalrClient(string ip)
         {
+            
             var connectingUrl = @"http://" + ip + ":8088/";
+            // For testing
+            connectingUrl = @"http://" + "192.168.3.80" + ":9000/";
+            // For testing
+
             try
             {
                 connection = new HubConnection(connectingUrl);

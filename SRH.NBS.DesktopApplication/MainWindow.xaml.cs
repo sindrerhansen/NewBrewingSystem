@@ -1,4 +1,7 @@
-﻿using SRH.NBS.DesktopApplication.ViewModel;
+﻿using Microsoft.AspNet.SignalR.Client;
+using Newtonsoft.Json;
+using SRH.NBS.Commen;
+using SRH.NBS.DesktopApplication.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +31,17 @@ namespace SRH.NBS.DesktopApplication
             InitializeComponent();
             mvm = new MainViewModel();
             DataContext = mvm;
+            var connectingUrl = @"http://" + "192.168.3.80" + ":9000/";
+            var hubConnection = new HubConnection(connectingUrl);
+            IHubProxy stockTickerHubProxy = hubConnection.CreateHubProxy("RealtimeBrewingData");
+            stockTickerHubProxy.On<string>("ReciveRealtimeBrewingData", msg => mvm.Volume=ParceString(msg).Volume.ToString());
+            hubConnection.Start();
+        }
+
+        private HotLiquidTank ParceString (string jsonObject)
+        {
+            var ret = JsonConvert.DeserializeObject<HotLiquidTank>(jsonObject);
+            return ret;
         }
     }
 }

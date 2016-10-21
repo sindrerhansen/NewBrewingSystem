@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="HostAppDir" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ServiceComponents">
+            <Component Id="cmp426376AD4C6CFCC8BF3F811C558BFE4D" Directory="HostAppDir" Guid="*">
+                <File Id="fil076E278058DEE3CA804F6D64444297D8" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\log4net.dll" />
+            </Component>
+            <Component Id="cmpCAFC2284051B2BF33BB8C33308E59A83" Directory="HostAppDir" Guid="*">
+                <File Id="fil97979D7C6CE3CF5C5BFFA9F481D57ABB" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\log4net.xml" />
+            </Component>
+            <Component Id="cmp4A95FEF0518B962E60608D749364C262" Directory="HostAppDir" Guid="*">
+                <File Id="fil1CC85D1797EC11F213EB569E3F9BF10B" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.Client.dll" />
+            </Component>
+            <Component Id="cmpBF3E26EEBE1124E6A3BE93C1634FAB92" Directory="HostAppDir" Guid="*">
+                <File Id="filC5E90418E4B287BD1C689B2D45E226AD" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.Client.xml" />
+            </Component>
+            <Component Id="cmp809FE157378380E01ABF3CB5E61CEB85" Directory="HostAppDir" Guid="*">
+                <File Id="filEFC0D76D0F17DD158A6E50DAC086FC7C" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.Core.dll" />
+            </Component>
+            <Component Id="cmpE1DF2AD33BEC34761B07E9EA73A9666B" Directory="HostAppDir" Guid="*">
+                <File Id="filF62DF064E28DCE63A5D7551AA0387BE5" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.Core.xml" />
+            </Component>
+            <Component Id="cmp758CB7B78A5084D7D24812D95C6E1969" Directory="HostAppDir" Guid="*">
+                <File Id="fil0103F2C02A703D1C87091722B0F5EAE2" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+            </Component>
+            <Component Id="cmpE43369BE614D607C58EFFD62CA6EB8B9" Directory="HostAppDir" Guid="*">
+                <File Id="fil150B9626D27FCB2BA76AEF714528D471" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.AspNet.SignalR.SystemWeb.xml" />
+            </Component>
+            <Component Id="cmpEA107421185E8F62B5EACE3D254B64E9" Directory="HostAppDir" Guid="*">
+                <File Id="filA952D871913B7F1FC4EE65DF9849EAC4" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Cors.dll" />
+            </Component>
+            <Component Id="cmp9F21306792DD0F8F7C2A9E7706BBFA9F" Directory="HostAppDir" Guid="*">
+                <File Id="filF4F4CD48125DF87CBEBBB757D4121AE6" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Cors.xml" />
+            </Component>
+            <Component Id="cmp2D5E8D654533EE4548A6F041BE2E1210" Directory="HostAppDir" Guid="*">
+                <File Id="filB5E75FC0ECF59845090A48F178D4F7E8" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.dll" />
+            </Component>
+            <Component Id="cmp524A6EF2985137D884A20AC241D30E9F" Directory="HostAppDir" Guid="*">
+                <File Id="filF684E62E8A1505CB16D5E5C75350AE2F" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Host.HttpListener.dll" />
+            </Component>
+            <Component Id="cmp1123D8D16AD56D36503570C83E017EF9" Directory="HostAppDir" Guid="*">
+                <File Id="fil125FB06FD775C81EB822B51BFF0E219A" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Host.HttpListener.xml" />
+            </Component>
+            <Component Id="cmp7327586A798AFE8A172BD560C481955C" Directory="HostAppDir" Guid="*">
+                <File Id="fil54F560DAA506CB3EBF078C7F4345AC5A" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Host.SystemWeb.dll" />
+            </Component>
+            <Component Id="cmp44E9E1911834804AD4FF5E1FA80F55D9" Directory="HostAppDir" Guid="*">
+                <File Id="filF5114C621D2B4803A612A155FA79BD0C" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Host.SystemWeb.xml" />
+            </Component>
+            <Component Id="cmp9CCFA387451A49715C7C6688335FF6DB" Directory="HostAppDir" Guid="*">
+                <File Id="fil04E27995EDE340416DC33D15890E1635" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Hosting.dll" />
+            </Component>
+            <Component Id="cmp72D5C92A15B5364DCBC1C09E20E7D6FC" Directory="HostAppDir" Guid="*">
+                <File Id="fil51F1D22D6A2CA88DF4609AFB3F980184" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Hosting.xml" />
+            </Component>
+            <Component Id="cmpF382408B9E3B6EA2539A7ABD9CC0EB92" Directory="HostAppDir" Guid="*">
+                <File Id="filCA48F0B3EEF2DFC6683892A025B6700B" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Security.dll" />
+            </Component>
+            <Component Id="cmp007CECD95918B7C4B5B6D023F4471428" Directory="HostAppDir" Guid="*">
+                <File Id="fil5CFE0952BB615F4976E602131A07D710" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.Security.xml" />
+            </Component>
+            <Component Id="cmpCA1C120A1C10D0CDCB3CFF8CB763DB81" Directory="HostAppDir" Guid="*">
+                <File Id="filDF02401F91DA531C0AEFDA2CD7E43BFE" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Microsoft.Owin.xml" />
+            </Component>
+            <Component Id="cmp0CCFBF023E97C5FB029502A6E43B1B21" Directory="HostAppDir" Guid="*">
+                <File Id="filF269358BD095D0DD9B5FEF297D6622D3" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmpF723991C87E18BEBD0CB30A0AF13AF9C" Directory="HostAppDir" Guid="*">
+                <File Id="filC2C2B6BE65F0EE68AF8EF5EC16809749" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmp5B0F855E307AFE8C95B2D8AF62EA3BA7" Directory="HostAppDir" Guid="*">
+                <File Id="filB12368F0798DA15B64E1FBDD5A1F2F20" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Owin.dll" />
+            </Component>
+            <Component Id="cmp7CA11D5947693B223F6987C02198F383" Directory="HostAppDir" Guid="*">
+                <File Id="fil28FABA0855C6102EADD38793824F3F95" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.Commen.dll" />
+            </Component>
+            <Component Id="cmpDFC60CE812651F7A1EA1F7952E78D0CD" Directory="HostAppDir" Guid="*">
+                <File Id="filB64D1AD8116ED331225719A2B2DB8044" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.Commen.pdb" />
+            </Component>
+            <Component Id="cmp6CD47D660432C12500D07B49ACE0FA1B" Directory="HostAppDir" Guid="*">
+                <File Id="fil4471B039F46B5B4959CB22DB119CEA8C" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.exe" />
+            </Component>
+            <Component Id="cmpA09AE0DD4EEDAB7819943697C6A98BD0" Directory="HostAppDir" Guid="*">
+                <File Id="filFE5CDF13910E064E9876096CCD4DE5DD" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.exe.config" />
+            </Component>
+            <Component Id="cmp38501CE8BEC7FA8732D2F64D03A0947E" Directory="HostAppDir" Guid="*">
+                <File Id="fil90C65D7F530E57E2BB79CD2FD22E1939" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.pdb" />
+            </Component>
+            <Component Id="cmpB762BDCA9008FDEDDFCBE6AC564516A1" Directory="HostAppDir" Guid="*">
+                <File Id="fil5E7CAE3053EEF5C0093DDEC425EE3E96" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.vshost.exe" />
+            </Component>
+            <Component Id="cmpDD21C730C5BE8DB917EDC01724C49B55" Directory="HostAppDir" Guid="*">
+                <File Id="fil6B3AE619350F0D51D9D53FCC637E5113" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.vshost.exe.config" />
+            </Component>
+            <Component Id="cmp9CC5E0E4AFCA1B70F9E8F8EE695A6E3F" Directory="HostAppDir" Guid="*">
+                <File Id="fil00A3C18C056A7BCFC63FD83987B15A85" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\SRH.NBS.RealtimeDataProviderService.vshost.exe.manifest" />
+            </Component>
+            <Component Id="cmp037D7CBEA7A9805668F79641C14E6EF5" Directory="HostAppDir" Guid="*">
+                <File Id="filC04D3713DAFA97286C4F23C44251D5BF" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\System.Web.Cors.dll" />
+            </Component>
+            <Component Id="cmpD766682B52345197D9E06288C7C7D7C3" Directory="HostAppDir" Guid="*">
+                <File Id="filE9C7E468464356236829F7ED18BAAC6F" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Topshelf.dll" />
+            </Component>
+            <Component Id="cmpA00B68B5B01B7BF59E388916D75B0536" Directory="HostAppDir" Guid="*">
+                <File Id="fil7386F5C080E28E5AFF58D05D8321B9B7" KeyPath="yes" Source="$(var.SRH.NBS.RealtimeDataProviderService.TargetDir)\Topshelf.xml" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

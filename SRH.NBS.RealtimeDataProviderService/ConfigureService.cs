@@ -1,6 +1,6 @@
 ﻿using Topshelf;
 
-namespace DataHubService
+namespace SRH.NBS.RealtimeDataProviderService
 {
     internal static class ConfigureService
     {

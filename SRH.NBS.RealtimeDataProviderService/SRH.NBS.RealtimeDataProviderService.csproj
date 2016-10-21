@@ -7,8 +7,8 @@
     <ProjectGuid>{2983BA88-0E4B-4D63-8AB5-DF1C748A0659}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataHubService</RootNamespace>
-    <AssemblyName>DataHubService</AssemblyName>
+    <RootNamespace>SRH.NBS.RealtimeDataProviderService</RootNamespace>
+    <AssemblyName>SRH.NBS.RealtimeDataProviderService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

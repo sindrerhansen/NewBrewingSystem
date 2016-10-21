@@ -6,7 +6,7 @@ using System.Linq;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 
-namespace SRH.NBS.DataProvider
+namespace SRH.NBS.HistoricalDataProviderService
 {
     [HubName("HistoricalBrewingData")]
     public class HistoricalBrewingDataHub : Hub

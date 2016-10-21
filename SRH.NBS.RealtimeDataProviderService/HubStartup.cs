@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin.Cors;
 using Owin;
 
-namespace DataHubService
+namespace SRH.NBS.RealtimeDataProviderService
 {
     class HubStartup
     {

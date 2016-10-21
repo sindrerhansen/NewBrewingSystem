@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Module Id="SRH.NBS.AllServicesInstaller" Language="1033" Version="1.0.0.0">
+		<Package Id="a025c4e4-717e-4b0e-a337-da3023d3194f" Manufacturer="" InstallerVersion="200" />
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="MergeRedirectFolder">
+
+				<!-- TODO: Remove the comments around this Component element in order to add resources to this module. -->
+				<!-- <Component Id="ModuleComponent" Guid="36618f20-7503-48a2-9a88-aad55e246541"> -->
+					<!-- TODO: Insert files, registry keys, and other resources here. -->
+				<!-- </Component> -->
+
+			</Directory>
+		</Directory>
+	</Module>
+</Wix>

@@ -7,8 +7,8 @@
     <ProjectGuid>{C73DFBAA-3BCF-4EBC-AF12-ED24A9245CF8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SRH.NBS.DataProvider</RootNamespace>
-    <AssemblyName>SRH.NBS.DataProvider</AssemblyName>
+    <RootNamespace>SRH.NBS.HistoricalDataProviderService</RootNamespace>
+    <AssemblyName>SRH.NBS.HistoricalDataProviderService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

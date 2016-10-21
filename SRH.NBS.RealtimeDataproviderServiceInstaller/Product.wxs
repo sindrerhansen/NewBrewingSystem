@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define PRODUCT="SRH NBS Realtime Dataprovider"?>
+  <?define SHORTNAME="NBS RDP"?>
+  <?define VERSION="!(bind.FileVersion.fil4471B039F46B5B4959CB22DB119CEA8C)"?>
+  <?define PRODUCTID="{FA7A55AA-432E-45C3-827B-79BDDA1DBA7B}"?>
+	<Product Id="*" 
+           Name="$(var.PRODUCT)" 
+           Language="1033" 
+           Version="1.0.0.0"
+           Manufacturer="Sindre Rynning Hansen" 
+           UpgradeCode="$(var.PRODUCTID)">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    
+    <Upgrade Id="$(var.PRODUCTID)">
+      <UpgradeVersion
+        Minimum="0.0.0.0" Maximum="99.0.0.0"
+        IncludeMinimum="yes" IncludeMaximum="no"
+        Property="PREVIOUSVERSIONSINSTALLED" />
+    </Upgrade>
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="SRH NBS Realtime Dataprovider Service Installer" Level="1">
+			<ComponentGroupRef Id="ServiceComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="SRHDir" Name="SRH">
+          <Directory Id="HostAppDir" Name="$(var.PRODUCT)" />
+        </Directory>
+      </Directory>
+    </Directory>
+    
+<!-- SERVICE as windows service-->
+    <CustomAction Id="RunTopShelfServiceInstall" Directory="HostAppDir" Execute="deferred" Return="ignore" Impersonate="no" ExeCommand="[HostAppDir]SRH.NBS.RealtimeDataProviderService.exe install start"/>
+    <CustomAction Id="RunTopShelfServiceUninstall" Directory="HostAppDir" Execute="deferred" Return="ignore" Impersonate="no" ExeCommand="[HostAppDir]SRH.NBS.RealtimeDataProviderService.exe uninstall"/>
+
+    <InstallExecuteSequence>
+      <Custom Action="RunTopShelfServiceInstall" After="InstallFiles">NOT Installed</Custom>
+      <Custom Action="RunTopShelfServiceUninstall" After='InstallInitialize'>Installed AND (REMOVE="ALL")</Custom>
+    </InstallExecuteSequence>
+	</Fragment>
+</Wix>

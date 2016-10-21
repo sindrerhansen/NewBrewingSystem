@@ -4,16 +4,16 @@ using SRH.NBS.Commen;
 using System;
 using System.Diagnostics;
 
-namespace DataHubService
+namespace SRH.NBS.RealtimeDataProviderService
 {
     [HubName("RealtimeBrewingData")]
     public class RealtimeBrewingDataHub : Hub
     {
 
-        public void OnRealtimeBrewingData(string message)
+        public void PublishRealtimeBrewingData(string message)
         {
             Debug.WriteLine(message);
-            Clients.All.ReceiveMulticastBrewingData(message);
+            Clients.All.ReciveRealtimeBrewingData(message);
         }
 
         public void SendCommand(string command)

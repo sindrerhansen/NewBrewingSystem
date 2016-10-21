@@ -15,7 +15,7 @@ namespace SRH.NBS.BrewingSystemSimulator
     public class Simulator
     {
         private const int port = 6000;
-        private TestClass testObject = new TestClass() { ForNavn = "Sindre", EtterNavn = "hansen", Age = 39 };
+      
         static void Main(string[] args)
         {
             StartSimulating();
@@ -40,7 +40,7 @@ namespace SRH.NBS.BrewingSystemSimulator
             bool done = false;
             var ip = GetLocalIPAddress();
             var testObject = new HotLiquidTank() { Name="HLT", Temperature=rnd.Next(0,100), Volume=(rnd.NextDouble()*60)};
-            IPEndPoint groupEP = new IPEndPoint(IPAddress.Parse("192.168.3.125"), port);
+            IPEndPoint groupEP = new IPEndPoint(IPAddress.Parse("192.168.3.80"), port);
             var sender = new UdpClient();
 
             try

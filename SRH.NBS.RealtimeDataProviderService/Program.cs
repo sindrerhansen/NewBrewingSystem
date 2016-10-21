@@ -1,4 +1,4 @@
-﻿namespace DataHubService
+﻿namespace SRH.NBS.RealtimeDataProviderService
 {
     class Program
     {
