@@ -7,7 +7,7 @@
 	<Product Id="*" 
            Name="$(var.PRODUCT)" 
            Language="1033" 
-           Version="1.0.0.0"
+           Version="$(var.VERSION)"
            Manufacturer="Sindre Rynning Hansen" 
            UpgradeCode="$(var.PRODUCTID)">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
@@ -19,7 +19,7 @@
         Property="PREVIOUSVERSIONSINSTALLED" />
     </Upgrade>
     
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MajorUpgrade DowngradeErrorMessage="A newer version of $(var.PRODUCT) is already installed." />
 		<MediaTemplate EmbedCab="yes" />
 
 		<Feature Id="ProductFeature" Title="SRH NBS Realtime Dataprovider Service Installer" Level="1">
