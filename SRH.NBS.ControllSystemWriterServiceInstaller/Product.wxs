@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="SRH.NBS.ControllSystemCommunicationServiceInstaller" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="7ec7f64d-dd82-4d1e-b973-ece89e421778">
+	<Product Id="*" Name="SRH.NBS.ControllSystemWriterServiceInstaller" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="08550190-9e2d-41ae-a3eb-bf47baf406af">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate />
 
-		<Feature Id="ProductFeature" Title="SRH.NBS.ControllSystemCommunicationServiceInstaller" Level="1">
+		<Feature Id="ProductFeature" Title="SRH.NBS.ControllSystemWriterServiceInstaller" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
 	</Product>
@@ -14,7 +14,7 @@
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="SRH.NBS.ControllSystemCommunicationServiceInstaller" />
+				<Directory Id="INSTALLFOLDER" Name="SRH.NBS.ControllSystemWriterServiceInstaller" />
 			</Directory>
 		</Directory>
 	</Fragment>
