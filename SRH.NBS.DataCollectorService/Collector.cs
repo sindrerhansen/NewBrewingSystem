@@ -7,10 +7,11 @@ namespace SRH.NBS.DataCollectorService
 
         static void Main(string[] args)
         {
-            var udpCollector = new UdpCollector();
             var realtimeHub = new SignalrClient("192.168.3.80");
+            var udpCollector = new UdpCollector(realtimeHub);
+            
 
-            udpCollector.Start(realtimeHub);
+            udpCollector.Start();
         }
         
     }
