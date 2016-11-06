@@ -21,9 +21,5 @@ namespace SRH.NBS.HistoricalDataProviderService
             Console.WriteLine(string.Format("Writing command {0} ", command));
         }
 
-        public TestClass Get()
-        {
-            return new TestClass { Age = 12, EtterNavn = "Hansen", ForNavn = "Sindre" };
-        }
     }
 }

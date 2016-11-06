@@ -39,7 +39,7 @@ namespace SRH.NBS.BrewingSystemSimulator
             Random rnd = new Random();
             bool done = false;
             var ip = GetLocalIPAddress();
-            var testObject = new HotLiquidTank() { Name="HLT", Temperature=rnd.Next(0,100), Volume=(rnd.NextDouble()*60)};
+            var testObject = new HotLiquidTank() { Name="HLT", Temperature=rnd.Next(0,100), AddedVolume = (rnd.NextDouble()*60)};
             IPEndPoint groupEP = new IPEndPoint(IPAddress.Parse("192.168.3.80"), port);
             var sender = new UdpClient();
 
@@ -54,7 +54,7 @@ namespace SRH.NBS.BrewingSystemSimulator
                     sender.Send(sendBytes, sendBytes.Length, groupEP);
                     Console.WriteLine(sendObject);
                     System.Threading.Thread.Sleep(1000);
-                    testObject.Volume = rnd.NextDouble() * 60;
+                    testObject.AddedVolume = rnd.NextDouble() * 60;
                     testObject.Temperature = rnd.NextDouble() * 100;
                 }
 

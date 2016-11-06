@@ -34,7 +34,7 @@ namespace SRH.NBS.DesktopApplication
             var connectingUrl = @"http://" + "192.168.3.80" + ":9000/";
             var hubConnection = new HubConnection(connectingUrl);
             IHubProxy stockTickerHubProxy = hubConnection.CreateHubProxy("RealtimeBrewingData");
-            stockTickerHubProxy.On<string>("ReciveRealtimeBrewingData", msg => mvm.Volume=ParceString(msg).Volume.ToString());
+            stockTickerHubProxy.On<string>("ReciveRealtimeBrewingData", msg => mvm.Volume=ParceString(msg).AddedVolume.ToString());
             hubConnection.Start();
         }
 

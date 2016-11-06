@@ -51,10 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrewingParameters.cs" />
+    <Compile Include="HeatingElement.cs" />
     <Compile Include="HotLiquidTank.cs" />
     <Compile Include="SignalrClient.cs" />
     <Compile Include="Tank.cs" />
-    <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
