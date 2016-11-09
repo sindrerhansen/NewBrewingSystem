@@ -61,7 +61,7 @@ namespace SRH.NBS.DataCollectorService
                     {
                         var reciveObject = JsonConvert.DeserializeObject<HotLiquidTank>(jsonObj);
                         Console.WriteLine(reciveObject.Temperature);
-                        Console.WriteLine(reciveObject.Volume);
+                        Console.WriteLine(reciveObject.AddedVolume);
                         if (realtimeHub.Connection.State == Microsoft.AspNet.SignalR.Client.ConnectionState.Connected)
                         {
                             realtimeHub.Hub.Invoke("PublishRealtimeBrewingData", jsonObj);
@@ -110,7 +110,7 @@ namespace SRH.NBS.DataCollectorService
 
                             var value = double.Parse(item.Remove(0, 5), CultureInfo.InvariantCulture);
 
-                            var tank = new HotLiquidTank() {Temperature = value, Volume=0 } ;
+                            var tank = new HotLiquidTank() {Temperature = value, AddedVolume=0 } ;
                             if (realtimeHub.Connection.State == Microsoft.AspNet.SignalR.Client.ConnectionState.Connected)
                             {
                                 realtimeHub.Hub.Invoke("PublishRealtimeBrewingData", tank);
